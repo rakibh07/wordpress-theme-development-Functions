@@ -1,2 +1,6 @@
 # wordpress-theme-development
-This Repository for Wordpress theme development essentila code, functions, short code and custom post type 
+
+This Repository for WordPress theme development essential code, functions, shortcode, and custom post type 
+
+
+you can collect all codes which you need. this repository will reduce huge time while you develop a theme from scratch 
