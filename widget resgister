@@ -1,0 +1,23 @@
+widgets or sidebar register code in functions.php
+
+
+function register_my_sidebar() {
+    register_sidebar( array(
+        'name' => __( 'My Sidebar', 'theme-text-domain' ),
+        'id' => 'my-sidebar',
+        'description' => __( 'This is my custom sidebar.', 'theme-text-domain' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ) );
+}
+add_action( 'widgets_init', 'register_my_sidebar' );
+
+
+
+You can then display the sidebar in your theme by using the dynamic_sidebar function in the appropriate template file, for example:
+
+if ( is_active_sidebar( 'my-sidebar' ) ) {
+    dynamic_sidebar( 'my-sidebar' );
+}
